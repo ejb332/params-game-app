@@ -8,11 +8,11 @@ class ParametersController < ApplicationController
   end
 
   def guess_number_method
-    @guess = params['guess']
+    @guess = params['guess'].to_i
     @answer = params['answer']
-    if @guess.to_i > 42
+    if @guess > 42
       @answer = "Guess a lower number"
-    elsif @guess.to_i < 42
+    elsif @guess < 42
       @answer = "Guess a higher number."
     else
       @answer = "That's it! 42"
