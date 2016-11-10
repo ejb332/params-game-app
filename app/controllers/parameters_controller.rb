@@ -7,6 +7,11 @@ class ParametersController < ApplicationController
     render 'parameters-game.html.erb'
   end
 
+  def params_game
+    @url_seg = params['name_of_game']
+    render 'params-game.html.erb'
+  end
+
   def guess_number_method
     @guess = params['guess'].to_i
     @answer = params['answer']
