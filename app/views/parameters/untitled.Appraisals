@@ -1,0 +1,1 @@
+parameters-game.html.erb
