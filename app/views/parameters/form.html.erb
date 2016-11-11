@@ -1,0 +1,10 @@
+<h1>Guess A Number Game</h1>
+<%= form_tag '/form_result_numbers', method: :post do %>
+  <div>
+    <%= label_tag :guess, 'So, what do you think it is?' %>
+    <%= text_field_tag :guess %>
+  </div>
+  <div>
+    <%= submit_tag 'Try your luck!' %>
+  </div>
+<% end %>
